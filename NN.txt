@@ -1,0 +1,52 @@
+NN?
+
+ANN is a machine Learning Technique which mimics functinality of human brain.
+
+Building blocks of human brain known as neuron. Typycally a human brain consis of 10 11 neurons.
+
+These neurons are interconnected to each other in a hiearchical fashion via Axons and trasmits Electrical signal from one layer to another call synapses. 
+
+This is how human learn things. Whenever we see, hear,feel and think something a 
+synapse(electrical impulse) is fired from one neuron to another in the hierarchy 
+which enables us to learn ,remember and memorize things in our daily life since the 
+day we were born.
+
+
+
+Why NN?
+
+
+Structure and working of a nueron
+Similar to brain "Artifician Neuron" or "neuron" is bused as Building block of ANN of NN.
+
+Add simple neuron Figure: https://www.google.com/search?q=artificial+neuron+diagram&rlz=1C1GCEV_enIN846IN846&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjzs-753Y3iAhXODGMBHQXZBqkQ_AUIDigB&biw=1920&bih=888#imgrc=9SWLN0bX1ebsIM:
+
+whre x1,x2,...,xn are inputs to neuron
+w1,w2,...,wn are weights associated with neuron. In biological neuron weights represents e biological synaptic strengths
+A : represents Activation function here.It will be responsible to activate or deactivate neuron.
+
+
+Bias Node
+https://towardsdatascience.com/everything-you-need-to-know-about-neural-networks-and-backpropagation-machine-learning-made-easy-e5285bc2be3a
+
+Using “bias” node is usually critical for creating successful learning model. 
+In short, a bias value allows to shift the activation function to the left or 
+right and it helps getting better fit for the data (better prediction function 
+as output).
+
+
+Typical NN/ANN is interconnected network of neuron which consists of:
+	1. Input Layer
+	2. Hidden Layer
+	3. Output Layer
+	
+	
+	
+
+
+IMportant terminolgies
+
+Activation Function.....why we need?
+Different Types of Activation Functions
+Which one to use
+Cost Function
