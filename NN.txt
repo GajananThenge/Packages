@@ -179,6 +179,7 @@ https://keras.io/
 	#RNN
 	https://adventuresinmachinelearning.com/keras-lstm-tutorial/
 	https://www.analyticsvidhya.com/blog/2017/12/introduction-to-recurrent-neural-networks/
+	https://www.analyticsvidhya.com/blog/2017/12/fundamentals-of-deep-learning-introduction-to-lstm/
 	1.A recurrent neural network is a neural network that 
 	attempts to model time or sequence dependent behaviour – such 
 	as language, stock prices, electricity demand and so on.
