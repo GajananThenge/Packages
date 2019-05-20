@@ -50,3 +50,144 @@ Activation Function.....why we need?
 Different Types of Activation Functions
 Which one to use
 Cost Function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+20-05-2019
+https://towardsdatascience.com/how-to-build-your-own-neural-network-from-scratch-in-python-68998a08e4f6
+https://keras.io/
+
+1.Keras
+	1. Core data structure is model.
+	2. Simplest way of model is Sequential model(linear stack of Layer)
+	3. It will used Tensor flow at backend for processing.
+	
+	Installation:
+	Note: Before installing Keras, please install one of its backend engines: TensorFlow, Theano, or CNTK.
+	We recommend the TensorFlow backend.
+	
+	
+	Keras was initially developed as part of the research effort of 
+	project ONEIROS (Open-ended Neuro-Electronic Intelligent Robot 
+	Operating System).
+	
+	You Can install option dependencies:
+		1.	cuDNN (Required whwn running Keras on GPU)
+		2.	HDF5 amd h5dy (Required to save Kears model on disk)
+		graphviz and pydot (used by visualisation utilities) to plot model graphs.
+		
+	Deep Learning Framework
+	A deep learning framework is an interface, library or a tool 
+	which allows us to build deep learning models more easily and 
+	quickly, without getting into the details of underlying 
+	algorithms. 
+	
+	With Keras
+	https://towardsdatascience.com/building-your-own-artificial-neural-network-from-scratch-on-churn-modeling-dataset-using-keras-in-690782f7d051
+	# ANN
+	Listing out the steps involved in training the ANN with Stochastic Gradient Descent:-
+	1)Randomly initialize the weights to small numbers close to 0(But not 0).
+	2)Input the 1st observation of your dataset in the Input Layer, each Feature in one Input Node.
+	3)Forward-Propagation from Left to Right, the neurons are activated in a way that the impact of each neuron’s activation.
+	is limited by the weights.Propagate the activations until getting the predicted result y.
+	4)Compare the predicted result with the actual result. Measure the generated error.
+	5)Back-Propagation: From Right to Left, Error is back propagated.Update the weights according to how much they are
+	responsible for the error.The Learning Rate tells us by how much such we update the weights.
+	6)Repeat Steps 1 to 5 and update the weights after each observation(Reinforcement Learning).
+	Or: Repeat Steps 1 to 5 but update the weights only after a batch of observations(Batch Learning).
+	7)When the whole training set is passed through the ANN.That completes an Epoch. Redo more Epochs.
+
+		
+	Importing the Keras libraries and packages
+	import keras
+	For building the Neural Network layer by layer
+
+	from keras.models import Sequential
+	To randomly initialize the weights to small numbers close to 0(But not 0)
+
+	from keras.layers import Dense
+	Initializing the ANN…
+	So there are actually 2 ways of initializing a deep learning model
+	— — — 1)Defining each layer one by one
+	— — — 2)Defining a Graph
+
+	We did not put any parameter in the Sequential object as we will be defining the Layers manually
+
+	classifier = Sequential()
+	Adding the input layer and the first hidden layer…
+	This remains an unanswered question till date that how many nodes of the hidden layer do we actually need?
+	There is no thumb rule but you can set the number of nodes in Hidden Layers as an Average of the number of Nodes in Input and Output Layer Respectively.(Works in 90% of the cases!!)
+	 — →Here avg= (11+1)/2==>6 So set Output Dim=6
+	 — →Init will initialize the Hidden Layer weights uniformly
+	 — →Activation Function is Rectifier Activation Function(Relu)
+
+	Input dim tells us the number of nodes in the Input Layer.This is done only once and wont be specified in further layers.
+
+	classifier.add(Dense(output_dim = 6, init = 'uniform', activation = 'relu', input_dim = 11))
+	Adding the second hidden layer…
+	classifier.add(Dense(output_dim = 6, init = 'uniform', activation = 'relu'))
+	Adding the output layer…
+	classifier.add(Dense(output_dim = 1, init = 'uniform', activation = 'sigmoid'))
+	Sigmoid activation function is used whenever we need Probabilities of 2 categories or less(Similar to Logistic Regression)
+	Switch to Softmax when the dependent variable has more than 2 categories.
+
+	Compiling the ANN…
+	classifier.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics = ['accuracy'])
+	Fitting the ANN to the Training set
+
+	classifier.fit(X_train, y_train, batch_size = 10, nb_epoch = 100)
+	Part 3 — Making the predictions and evaluating the model
+	Predicting the Test set results
+
+	y_pred = classifier.predict(X_test)
+	y_pred = (y_pred > 0.5)
+	if y_pred is larger than 0.5 it returns true(1) else false(2)
+
+	print(y_pred)
+	This Model when trained on the train data and when tested on the test data gives us an accuracy of around 86% in both of the cases.Which from our point of view is Great!!!
+
+	Making the Confusion Matrix
+
+	from sklearn.metrics import confusion_matrix
+	cm = confusion_matrix(y_test, y_pred)
+	print(cm)
+	Obtained from Confusion Matrix.You may change values as per what is obtained in your confusion matrix.
+
+	print(accuracy)
+	
+	#CNN
+	
+	https://www.analyticsvidhya.com/blog/2016/10/tutorial-optimizing-neural-networks-using-keras-with-image-recognition-case-study/
+	
+	
+	
+	
+	#RNN
+	https://adventuresinmachinelearning.com/keras-lstm-tutorial/
+	https://www.analyticsvidhya.com/blog/2017/12/introduction-to-recurrent-neural-networks/
+	1.A recurrent neural network is a neural network that 
+	attempts to model time or sequence dependent behaviour – such 
+	as language, stock prices, electricity demand and so on.
+	
+	
+	
+	
+	
+		
+
+
+
