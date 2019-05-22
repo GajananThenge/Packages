@@ -166,13 +166,61 @@ for i in range(len(s)):
 
 
 
+Write a Python program to concatenate following dictionaries to create a new one.
+
+Sample Dictionary : 
+dic1={1:10, 2:20} 
+dic2={3:30, 4:40} 
+dic3={5:50,6:60}
+Expected Result : {1: 10, 2: 20, 3: 30, 4: 40, 5: 50, 6: 60}
+
+Write a Python program to remove duplicates from a list.
+
+a = [10,20,30,20,10,50,60,40,80,50,40]  
+  
+dup_items = set()  
+uniq_items = []  
+for x in a:  
+    if x not in dup_items:  
+        uniq_items.append(x)  
+        dup_items.add(x)  
+  
+print(dup_items)  
+
+35. Write a Python program to create a list by concatenating a given list which range goes from 1 to n. Go to the editor
+Sample list : ['p', 'q']
+n =5
+Sample Output : ['p1', 'q1', 'p2', 'q2', 'p3', 'q3', 'p4', 'q4', 'p5', 'q5']
+Ans:
+my_list = ['p', 'q']
+n = 4
+new_list = ['{}{}'.format(x, y) for y in range(1, n+1) for x in my_list]
+print(new_list)
 
 
 
 
 
+39. Write a Python program to convert a list of multiple integers into a single integer. Go to the editor
+Sample list: [11, 33, 50]
+Expected Output: 113350
+
+
+print("Original List: ",L)
+x = int("".join(map(str, L)))
+print("Single Integer: ",x)
 
 
 
+Write a Python program to iterate over two lists simultaneously.
+num = [1, 2, 3]
+color = ['red', 'white', 'black']
+for (a,b) in zip(num, color):
+     print(a, b)
+
+
+Write a Python program to find the list in a list of lists whose sum of elements is the highest.
+num = [[1,2,3], [4,5,6], [10,11,12], [7,8,9]]
+print(max(num, key=sum))
 
 
