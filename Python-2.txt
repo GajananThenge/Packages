@@ -1,0 +1,149 @@
+Generator
+A generator expression does not create the full list in memory, but creates an iterator objects. This iterator is lazy and will create the items on demand. When 
+Iterator.
+
+A generator is a function that returns an object (iterator) which we can iterate over (one value at a time).
+
+A generator expression can possibly save a lot of memory and be more efficient
+Generator expressions can only be iterated once and cannot be accessed by index
+
+How to create a generator in Python?
+It is as easy as defining a normal function with yield statement instead of a return statement.
+
+Advantages of Generator:
+1. Easy to implement
+2. Memory efficient
+3. Represent Infinite Stream
+
+
+
+Differences between Generator function and a Normal function?
+
+Ex.
+https://www.programiz.com/python-programming/generator
+# A simple generator function
+def my_gen():
+    n = 1
+    print('This is printed first')
+    # Generator function contains yield statements
+    yield n
+
+    n += 1
+    print('This is printed second')
+    yield n
+
+    n += 1
+    print('This is printed at last')
+    yield n
+
+	
+# Iterator
+https://www.programiz.com/python-programming/iterator#infinite
+Iterators are objects that can be iterated upon.
+Returns one element at a time.	
+
+https://www.programiz.com/python-programming/iterator
+	
+	
+
+
+Map,filter,Reduce
+
+Map:
+syntax: map(f,iterator)
+Its LAzy in Python
+
+To get the 10 first even numbers, with map you can write: evens = map(lambda n: n*2, range(10)).
+
+When all you’re doing is calling an already-defined function on each element, map(f, lst) is a little faster than the corresponding list comprehension 
+[f(x) for x in lst]. To an experienced Python 
+
+
+
+
+Comprehensions:
+https://courses.cs.washington.edu/courses/cse140/14wi/lectures/22-list-comprehensions.pdf
+
+List Comprehensions:
+1.Enables you to transform a list into another list
+2.The syntax for generator expression is similar to that of a list comprehension in Python. But the square brackets are replaced with round parentheses.
+
+
+When Not To Used:
+
+1.You cannot use list comprehensions when the construction rule is too complicated to be expressed with "for" and "if" statements, 
+or if the construction rule can change dynamically at runtime. In this case, you better use map() and / or filter() with an 
+appropriate function. Of course, you can combine that with list comprehensions.
+
+2. Based on a specific condition, if you want to break out of the LC, during iteration, it is NOT possible at all. Though it uses for loop, 
+break, continue and other looping related stuff will not be available.
+
+
+Python Generator Expression
+my_list = [1,2,5,3,8,9]
+(x**2 for x in my_list)
+
+
+The major difference between a list comprehension and a generator expression is that while list 
+comprehension produces the entire list, generator expression produces one item at a time.
+
+
+https://www.machinelearningplus.com/python/list-comprehensions-in-python/
+
+Functions:
+1.function is a piece of code written to carry out a specified task.
+2. Inputs to function: Arguments
+3. It may or may not return values
+4. Parameters: names used when defining a function or a method, and into which arguments will be mapped
+5. Arguments :  argument is a value that is passed to the function when it's called
+6.  while the function or method code refers to the arguments by their parameter names.
+7.  functions immediately exit when they come across a return statement
+
+Function Arguments in Python:
+Default arguments: 
+ take a default value if no argument value is passed during the function call.
+		ex. def plus(a,b = 2):
+		  return a + b
+		  
+		# Call `plus()` with only `a` parameter
+		plus(a=1)
+
+		# Call `plus()` with `a` and `b` parameters
+		plus(a=1, b=3)
+
+Required arguments:
+Required arguments are the arguments passed to a function in correct positional order.
+
+Keyword arguments:
+to make sure that you call all the parameters in the right order, you can use the keyword arguments in your function call.
+Variable number of arguments
+
+
+what is __name__ == '__main__'?
+When a python program is executed, python interpreter starts executing code inside it. It also sets few implicit variable values, one of them is __name__ whose value is set as __main__.
+For python main function, we have to define a function and then use if __name__ == '__main__' condition to execute this function.
+Scope and Lifetime of variables
+Local and Global
+
+Variables that are defined inside a function body have a local scope, and those defined outside have a global scope.
+
+
+
+
+
+
+
+
+
+
+''' Program to transpose a matrix using list comprehension'''
+
+
+X = [[12,7],
+    [4 ,5],
+    [3 ,8]]
+
+result = [[X[j][i] for j in range(len(X))] for i in range(len(X[0]))]
+
+for r in result:
+   print(r)
