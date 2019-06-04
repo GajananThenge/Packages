@@ -1,5 +1,10 @@
 https://towardsdatascience.com/how-to-build-your-own-neural-network-from-scratch-in-python-68998a08e4f6
 https://keras.io/
+https://chatbotslife.com/resnets-highwaynets-and-densenets-oh-my-9bb15918ee32
+https://www.google.com/search?q=inception+transfer+learning&rlz=1C1GCEV_enIN846IN846&oq=inception+tr&aqs=chrome.2.69i57j0l5.9392j0j7&sourceid=chrome&ie=UTF-8
+https://becominghuman.ai/transfer-learning-retraining-inception-v3-for-custom-image-classification-2820f653c557
+https://towardsdatascience.com/a-comprehensive-hands-on-guide-to-transfer-learning-with-real-world-applications-in-deep-learning-212bf3b2f27a
+
 
 1.Keras
 	1. Core data structure is model.
